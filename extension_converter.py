@@ -1,7 +1,9 @@
 import os
 def main(folder_path):
     cnt=1
-    new_ext=input('🤖Type the new extension here: ')
+    new_ext=input('🤖Enter nothing to stop. Enter the new extension here: ')
+    if new_ext=='':
+        return
     avoid_same_name=1
     while new_ext[0] != '.':
         new_ext=input('😡Invalid input! Extension must starts with a ".", try again: ')
