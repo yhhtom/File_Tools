@@ -3,7 +3,7 @@ import os
 from colorama import init,Fore,Style
 init()
 print(Fore.GREEN+'PD20W File Tools ver. 0.0.1'+Style.RESET_ALL)
-folder_path=input(Fore.BLUE+'Enter nothing to use the default Input folder, or enter your folder path: '+Style.RESET_ALL)
+folder_path=input(Fore.CYAN+'Enter nothing to use the default Input folder, or enter your folder path: '+Style.RESET_ALL)
 current_folder=os.path.dirname(os.path.abspath(__file__))
 if(folder_path==''):
     folder_path=os.path.join(current_folder,'Input')
@@ -12,8 +12,15 @@ while not os.path.exists(folder_path):
 while os.path.isfile(folder_path):
     folder_path=input('This is not a folder! Please try again')
 print('Enter "quit" to quit')
+tools_list=[
+'extension_converter', 
+'massive_renamer',
+'file_creator'
+]
 def main():
-    operation=input(Fore.BLUE+'Welcome! Enter the tool name to use it! Enter "tools" to see all the tools: '+Style.RESET_ALL)
+    operation=input(Fore.CYAN+'Welcome! Enter the tool name or number to use it! Enter "tools" to see all the tools: '+Style.RESET_ALL)
+    if operation.isdigit():
+        operation=tools_list[int(operation)-1]
     if operation=='quit':
         return
     try:

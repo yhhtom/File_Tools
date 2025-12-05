@@ -1,7 +1,8 @@
 tools_list=[
 'extension_converter', 
-'massive_renamer'
+'massive_renamer',
+'file_creator'
 ]
 def main(s):
-    for i in tools_list:
-        print(i)
+    for a,b in enumerate(tools_list):
+        print(a+1,b,sep=': ')

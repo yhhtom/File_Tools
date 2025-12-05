@@ -1,6 +1,6 @@
 import os
 def main(folder_path):
-    print('Enter nothing to skip file!')
+    print('🤖Enter nothing to skip file!')
     cnt=1
     def InputUntillValid(s):
         while True:
@@ -8,7 +8,7 @@ def main(folder_path):
                 if i.isdigit() or i.isalpha() or i=='_' or i=='.':
                     pass
                 else:
-                    s=input(f'Your input has invalid characters "{i}"! Try again: ')
+                    s=input(f'😡Your input has invalid characters "{i}"! Try again: ')
                     break
             else:
                 break
@@ -17,7 +17,7 @@ def main(folder_path):
         file_path=os.path.join(folder_path,file_name)
         if not os.path.isfile(file_path):
             continue
-        new_file_name=input(f'Rename "{file_name}" to: ')
+        new_file_name=input(f'🤖Rename "{file_name}" to: ')
         if(new_file_name==''):
             continue
         new_file_name=InputUntillValid(new_file_name)
