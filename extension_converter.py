@@ -3,6 +3,7 @@ def main(folder_path):
     cnt=1
     new_ext=input('🤖Enter nothing to stop. Enter the new extension here: ')
     if new_ext=='':
+        print(f'Done! Converted {cnt-1} file(s) 🙂')
         return
     avoid_same_name=1
     while new_ext[0] != '.':
@@ -21,4 +22,4 @@ def main(folder_path):
         new_file_path=os.path.join(folder_path,new_file_name)
         os.rename(file_path,new_file_path)
         cnt+=1
-print(f'Done! Converted {cnt-1} file(s) 🙂')
+    print(f'Done! Converted {cnt-1} file(s) 🙂')
