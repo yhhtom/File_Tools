@@ -3,7 +3,7 @@ import os
 from colorama import init,Fore,Style
 init()
 print(Fore.GREEN+'PD20W File Tools ver. 0.0.1'+Style.RESET_ALL)
-folder_path=input(Fore.CYAN+'Enter nothing to use the default Input folder, or enter your folder path: '+Style.RESET_ALL)
+folder_path=input(Fore.RED+'Enter nothing to use the default Input folder, or enter your folder path: '+Style.RESET_ALL)
 current_folder=os.path.dirname(os.path.abspath(__file__))
 if(folder_path==''):
     folder_path=os.path.join(current_folder,'Input')
@@ -14,7 +14,7 @@ while os.path.isfile(folder_path):
 print('Enter "quit" to quit')
 tools_list=[
 'extension_converter', 
-'massive_renamer',
+'renamer',
 'file_creator'
 ]
 while True:

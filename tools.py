@@ -1,6 +1,6 @@
 tools_list=[
 'extension_converter', 
-'massive_renamer',
+'renamer',
 'file_creator'
 ]
 def main(s):

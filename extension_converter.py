@@ -21,4 +21,4 @@ def main(folder_path):
         new_file_path=os.path.join(folder_path,new_file_name)
         os.rename(file_path,new_file_path)
         cnt+=1
-    print(f'Done! Converted {cnt-1} file(s) 🙂')
+print(f'Done! Converted {cnt-1} file(s) 🙂')
